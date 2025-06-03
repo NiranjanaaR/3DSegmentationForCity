@@ -36,4 +36,5 @@ The SAGS framework was tested separately using its original implementation, with
 ## Acknowledgements
 [CityGaussian_v2](https://github.com/Linketic/CityGaussian )
 [SAGA (Segment Any Gaussian)](https://github.com/Jumpat/SegAnyGAussians)
+[SAGS](https://github.com/XuHu0529/SAGS)
 AI tools such as ChatGPT and Grammarly were used for language and code refinement.
