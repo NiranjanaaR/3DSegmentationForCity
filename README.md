@@ -28,12 +28,13 @@ All 3D results can be visualized using the [PlayCanvas Model Viewer](https://pla
 
 ## Additional Results
 
-Experiments were also conducted using the Segment Anything in 3D Gaussians [SAGS](https://github.com/XuHu0529/SAGS) framework on the Lund 50 dataset to compare edge-aware segmentation performance. The following images demonstrate that SAGS provides improved boundary clarity, although some structures remain incomplete due to sparse point density.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5e51ca3c-571c-417b-aa06-6e6e2b3e1e81" alt="SAGD Front View" width="48%" style="margin-right: 1%;">
-  <img src="https://github.com/user-attachments/assets/041fad3a-0e3d-4712-b292-978b6316998b" alt="SAGD Back View" width="48%">
-</p> 
-The SAGS framework was tested separately using its original implementation, with only output visualizations shared in the results folder. The modified Jupyter Notebook for SAGS experiments is included in this repository.
+Experiments were also conducted using the SAGD (Boundary-Enhanced Segment Anything in 3D Gaussian via Gaussian Decomposition) framework, implemented in the SAGS GitHub repository, on the Lund 50 dataset to compare edge-aware segmentation performance. The following images demonstrate that SAGD provides improved boundary clarity, although some structures remain incomplete due to sparse point density.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/5e51ca3c-571c-417b-aa06-6e6e2b3e1e81" alt="SAGD Front View" width="48%" style="margin-right: 1%;"> <img src="https://github.com/user-attachments/assets/041fad3a-0e3d-4712-b292-978b6316998b" alt="SAGD Back View" width="48%"> </p>
+
+Although the repository is titled SAGS, it corresponds to the SAGD method described in the paper “SAGD: Boundary-Enhanced Segment Anything in 3D Gaussian via Gaussian Decomposition”.
+The SAGD framework was tested separately using its original implementation. Only output visualizations are shared in the results folder, while the modified Jupyter Notebook used for the SAGD experiments is included in this repository.
+
 
 ## Acknowledgements
 [CityGaussian_v2](https://github.com/Linketic/CityGaussian )
