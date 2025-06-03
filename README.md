@@ -1,5 +1,5 @@
-**Scaling Up SAGA: Adapting 3D Segmentation for Large-Scale Aerial Datasets** 
-## Thesis Experiments
+## Scaling Up SAGA: Adapting 3D Segmentation for Large-Scale Aerial Datasets 
+**Thesis Experiments**
 
 This repository accompanies my master’s thesis and demonstrates experiments using [CityGaussian_v2](https://github.com/Linketic/CityGaussian ) and [SAGA (Segment Any Gaussian)](https://github.com/Jumpat/SegAnyGAussians).
 *These visualizations show segmentation of houses and buildings from large-scale 3D city models using the methods developed in this thesis.
