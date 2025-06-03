@@ -26,7 +26,7 @@ The full set of experiment results, including output files and visualizations fo
 
 All 3D results can be visualized using the [PlayCanvas Model Viewer](https://playcanvas.com/model-viewer).
 
-## SAGS (Segment Anything in 3D Gaussians)
+## Additional Results
 
 Experiments were also conducted using the [SAGS](https://github.com/XuHu0529/SAGS) framework on the Lund 50 dataset to compare edge-aware segmentation performance. The following images demonstrate that SAGD provides improved boundary clarity, although some structures remain incomplete due to sparse point density.
 <p align="center">
