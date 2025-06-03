@@ -1,0 +1,22 @@
+I addeed data parallel, nn.Module, wrapped the FeatureGaussianmodel and tried to run it paralelly, but it didnot because:
+
+You're using DataParallel, which only parallelizes the .forward() method.
+
+But you're calling methods like .get_xyz or .change_to_segmentation_mode outside of .forward(), and those don't get distributed to all GPUs.
+
+That's why it still only uses GPU 0, and you see CUDA OOM errors.
+
+so next option! 
+
+
+DataParallel splits the input data across GPUs, but in your case, the model doesn’t take typical tensor inputs — it uses a complex class (FeatureGaussianModel) that holds internal state, and methods like .get_xyz() or .forward() are never actually called with tensor inputs.
+
+So when DataParallel splits and distributes things:
+
+It doesn't know how to handle the non-standard structure.
+
+Internal calls like .get_xyz happen outside the forward() method, and thus don’t get replicated on each GPU properly.
+
+This causes AttributeError, or worse, CUDA illegal memory access errors 😵‍💫
+
+tried to modify using ddp, and trie, still oom! then reduces sample- from 8 to 4! and the trainin went thru! but no features are coming! thats because it consideres only 4 cameras! then most of the values are Nan! so then moved it back to 8! implemented lazy loading! and also reduced sample_rays from 1000 to 300! 
